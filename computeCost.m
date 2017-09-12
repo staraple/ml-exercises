@@ -13,7 +13,11 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+temp1 = X' * X(:,2) - [ones(1,m) * X(:,2) - m; 1];
+temp2 = X' * y;
+temp3 = ones(1,m) * (y .^ 2);
 
+J = (1 / (2 * m)) * ((theta' .^ 2) * temp1 - 2 * theta' * temp2 + temp3);
 
 
 
