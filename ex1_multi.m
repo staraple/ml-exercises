@@ -106,6 +106,7 @@ fprintf('\n');
 % not need to be normalized.
 price = 0; % You should change this
 
+price = theta' * [1; (1650 - mu(1)) / sigma(1); (3 - mu(2)) / sigma(2)];
 
 % ============================================================
 
@@ -151,6 +152,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 price = 0; % You should change this
 
+price = theta' * [1; 1650; 3];
 
 % ============================================================
 
